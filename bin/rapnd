@@ -68,7 +68,7 @@ when 'start'
     Daemons.daemonize(
       :app_name => options[:queue],
       :dir_mode => :normal,
-      :dir => "#{options[:dir]}/tmp",
+      :dir => "#{options[:dir]}/tmp/pids",
       :log_dir => "#{options[:dir]}/log",
       :backtrace => true,
       :log_output => true
@@ -78,7 +78,7 @@ when 'start'
   Rapnd::Daemon.new(options).run!
 when 'stop'
   unless options[:foreground]
-    files = Daemons::PidFile.find_files("#{options[:dir]}/tmp", options[:queue])
+    files = Daemons::PidFile.find_files("#{options[:dir]}/tmp/pids", options[:queue])
     files.each do |file|
       pid = File.open(file) {|h| h.read}.to_i
       `kill -9 #{pid}`

@@ -71,7 +71,7 @@ module Rapnd
             self.apple.write(notification.to_bytes)
           end
           Airbrake.notify(e, {:environment_name => self.queue }) if @airbrake
-          @logger.error "Encountered error: #{e}"
+          @logger.error "Encountered error: #{e}, backtrace #{e.backtrace}"
         end
       end
     end

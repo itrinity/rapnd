@@ -27,6 +27,7 @@ module Rapnd
       @redis = Redis.new(redis_options)
       @queue = options[:queue]
       @cert = options[:cert]
+      @password = options[:password]
       @host = options[:host]
       @logger = Logger.new("#{options[:dir]}/log/#{options[:queue]}.log")
       @logger.info "Listening on queue: #{self.queue}"

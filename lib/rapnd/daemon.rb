@@ -55,7 +55,7 @@ module Rapnd
         begin
           message = @redis.blpop(self.queue, 1)
           if message
-            notification = Rapnd::Notification.new(JSON(message.last))
+            notification = Rapnd::Notification.new(JSON.parse(message.last,:symbolize_names => true))
             self.connect! unless self.connected
             @logger.info "Sending #{notification.device_token}: #{notification.json_payload}"
             self.apple.write(notification.to_bytes)

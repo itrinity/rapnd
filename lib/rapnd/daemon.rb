@@ -49,6 +49,14 @@ module Rapnd
       
       return @sock, @ssl
     end
+
+    def push(notification)
+      @logger.info "Sending #{notification.device_token}: #{notification.json_payload}"
+      self.apple.write(notification.to_bytes)
+      @logger.info 'Message sent'
+
+      true
+    end
     
     def run!
       loop do
@@ -56,20 +64,25 @@ module Rapnd
           message = @redis.blpop(self.queue, 1)
           if message
             notification = Rapnd::Notification.new(JSON.parse(message.last,:symbolize_names => true))
+
             self.connect! unless self.connected
-            @logger.info "Sending #{notification.device_token}: #{notification.json_payload}"
-            self.apple.write(notification.to_bytes)
+
+            self.push(notification)
           end
         rescue Exception => e
           if e.class == Interrupt || e.class == SystemExit
             @logger.info "Shutting down..."
             exit(0)
           end
+
+          @logger.info 'Trying to reconnect...'
           self.connect!
+
           if notification
             @logger.info "Trying again for: #{notification.json_payload}"
-            self.apple.write(notification.to_bytes)
+            self.push(notification)
           end
+
           Airbrake.notify(e, {:environment_name => self.queue }) if @airbrake
           @logger.error "Encountered error: #{e}, backtrace #{e.backtrace}"
         end

@@ -19,7 +19,7 @@ module Rapnd
       options[:password]    ||= ''
       raise 'No cert provided!' unless options[:cert]
       
-      Airbrake.configure { |config| config.api_key = options[:airbrake]; @airbrake = true; } if options[:airbrake]
+      #Airbrake.configure { |config| config.api_key = options[:airbrake]; @airbrake = true; } if options[:airbrake]
       
       redis_options = { :host => options[:redis_host], :port => options[:redis_port] }
       redis_options[:password] = options[:redis_password] if options.has_key?(:redis_password)
@@ -35,27 +35,55 @@ module Rapnd
     
     def connect!
       @logger.info 'Connecting...'
+
+      cert = self.setup_certificate
+      @sock = self.setup_socket(cert)
+
+      @logger.info 'Connected!'
+
+      @sock
+    end
+
+    def setup_certificate
+      @logger.info 'Setting up certificate...'
       @context      = OpenSSL::SSL::SSLContext.new
       @context.cert = OpenSSL::X509::Certificate.new(File.read(@cert))
       @context.key  = OpenSSL::PKey::RSA.new(File.read(@cert), @password)
+      @logger.info 'Certificate created!'
 
-      @sock         = TCPSocket.new(@host, 2195)
-      self.apple    = OpenSSL::SSL::SSLSocket.new(@sock, @context)
-      self.apple.sync = true
-      self.apple.connect
-      
-      self.connected = true
-      @logger.info 'Connected!'
-      
-      return @sock, @ssl
+      @context
+    end
+
+    def setup_socket(ctx)
+      @logger.info 'Connecting...'
+
+      socket_tcp = TCPSocket.new(@host, 2195)
+      OpenSSL::SSL::SSLSocket.new(socket_tcp, ctx).tap do |s|
+        s.sync = true
+        s.connect
+      end
+    end
+
+    def reset_socket
+      @sock.close if @sock
+      @sock = nil
+
+      connect!
     end
 
     def push(notification)
-      @logger.info "Sending #{notification.device_token}: #{notification.json_payload}"
-      self.apple.write(notification.to_bytes)
-      @logger.info 'Message sent'
+      begin
+        @logger.info "Sending #{notification.device_token}: #{notification.json_payload}"
+        self.apple.write(notification.to_bytes)
+        @logger.info 'Message sent'
 
-      true
+        true
+      rescue OpenSSL::SSL::SSLError, Errno::EPIPE => e
+        @logger.error "Encountered error: #{e}, backtrace #{e.backtrace}"
+        @logger.info 'Trying to reconnect...'
+        reset_socket
+        @logger.info 'Reconnected'
+      end
     end
     
     def run!
@@ -65,32 +93,25 @@ module Rapnd
           if message
             notification = Rapnd::Notification.new(JSON.parse(message.last,:symbolize_names => true))
 
-            self.connect! unless self.connected
+            self.connect! unless @sock
 
             self.push(notification)
           end
         rescue Exception => e
           if e.class == Interrupt || e.class == SystemExit
-            @logger.info "Shutting down..."
+            @logger.info 'Shutting down...'
             exit(0)
           end
 
+          @logger.error "Encountered error: #{e}, backtrace #{e.backtrace}"
+
           @logger.info 'Trying to reconnect...'
           self.connect!
+          @logger.info 'Reconnected'
 
-          if notification
-            @logger.info "Trying again for: #{notification.json_payload}"
-            self.push(notification)
-          end
-
-          Airbrake.notify(e, {:environment_name => self.queue }) if @airbrake
-          @logger.error "Encountered error: #{e}, backtrace #{e.backtrace}"
+          retry
         end
       end
     end
-  end
-  
-  def send_message(message)
-    
   end
 end

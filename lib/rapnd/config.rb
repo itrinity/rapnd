@@ -31,5 +31,6 @@ module Rapnd
     option :redis_host, :default => 'localhost'
     option :redis_port, :default => 6379
     option :redis_password
+    option :logfile
   end
 end

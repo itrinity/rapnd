@@ -7,8 +7,7 @@ module Rapnd
       @cert = options[:cert]
       @password = options[:password]
       @host = options[:host]
-
-      @logger ||= Logger.new("#{options[:dir]}/log/#{options[:queue]}.log")
+      @port = options[:port]
     end
 
     def connect!
@@ -35,7 +34,7 @@ module Rapnd
     def setup_socket(ctx)
       @logger.info 'Connecting...'
 
-      socket_tcp = TCPSocket.new(@host, 2195)
+      socket_tcp = TCPSocket.new(@host, @port)
       OpenSSL::SSL::SSLSocket.new(socket_tcp, ctx).tap do |s|
         s.sync = true
         s.connect

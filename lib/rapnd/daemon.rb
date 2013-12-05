@@ -4,6 +4,7 @@ require 'active_support/json'
 require 'base64'
 require 'airbrake'
 require 'rapnd/client'
+require 'rapnd/log'
 
 module Rapnd
   class Daemon
@@ -13,6 +14,7 @@ module Rapnd
       options[:redis_host]  ||= 'localhost'
       options[:redis_port]  ||= '6379'
       options[:host]        ||= 'gateway.sandbox.push.apple.com'
+      options[:port]        ||=  2195
       options[:queue]       ||= 'rapnd_queue'
       options[:password]    ||= ''
       raise 'No cert provided!' unless options[:cert]
@@ -27,8 +29,11 @@ module Rapnd
       @cert = options[:cert]
       @password = options[:password]
       @host = options[:host]
+      @port = options[:port]
       @dir = options[:dir]
-      @logger ||= Logger.new("#{options[:dir]}/log/#{options[:queue]}.log")
+      #@logger ||= Logger.new("#{options[:dir]}/log/#{options[:queue]}.log")
+
+      @logger = Log.new(logfile: options[:logfile]).write
       @logger.info "Listening on queue: #{self.queue}"
     end
     
@@ -59,7 +64,7 @@ module Rapnd
     end
 
     def client
-      @client ||= Rapnd::Client.new(host: @host, cert: @cert, password: @password, dir: @dir, queue: @queue)
+      @client ||= Rapnd::Client.new(host: @host, port: @port, cert: @cert, password: @password, dir: @dir, queue: @queue)
     end
   end
 end

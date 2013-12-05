@@ -1,6 +1,7 @@
 require 'rapnd/daemon'
 require 'rapnd/notification'
 require 'rapnd/config'
+require 'rapnd/feedback'
 require 'redis'
 require 'logger'
 

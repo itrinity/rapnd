@@ -71,10 +71,15 @@ module Rapnd
       connect!
     end
 
+    def socket
+      @sock ||= connect!
+    end
+
     def push(notification)
       begin
         @logger.info "Sending #{notification.device_token}: #{notification.json_payload}"
-        @sock.write(notification.to_bytes)
+        socket.write(notification.to_bytes)
+        socket.flush
         @logger.info 'Message sent'
 
         true
@@ -92,8 +97,6 @@ module Rapnd
           message = @redis.blpop(self.queue, 1)
           if message
             notification = Rapnd::Notification.new(JSON.parse(message.last,:symbolize_names => true))
-
-            self.connect! unless @sock
 
             self.push(notification)
           end

@@ -80,6 +80,13 @@ module Rapnd
         @logger.info "Sending #{notification.device_token}: #{notification.json_payload}"
         socket.write(notification.to_bytes)
         socket.flush
+
+        if IO.select([socket], nil, nil, 1) && error = socket.read(6)
+          error = error.unpack('ccN')
+          @logger.error "Encountered error in push method: #{error}, backtrace #{error.backtrace}"
+          return false
+        end
+
         @logger.info 'Message sent'
 
         true

@@ -76,5 +76,12 @@ module Rapnd
         @logger.info 'Reconnected'
       end
     end
+
+    def feedback
+      if bunch = socket.read(38)
+        f = bunch.strip.unpack('N1n1H140')
+        Rapnd::FeedbackItem.new(Time.at(f[0]), f[2])
+      end
+    end
   end
 end

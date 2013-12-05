@@ -24,6 +24,18 @@ module Rapnd
       @dir = options[:dir]
     end
 
+    def data
+      @feedback ||= receive
+    end
+
+    def receive
+      feedbacks = []
+      while f = client.feedback
+        feedbacks << f
+      end
+      return feedbacks
+    end
+
     def client
       @client ||= Rapnd::Client.new(host: @host, port: @port, )
     end

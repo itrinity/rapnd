@@ -1,3 +1,5 @@
+require 'logger'
+
 module Rapnd
   class Log
     def initialize(options = {})

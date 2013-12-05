@@ -7,7 +7,7 @@
     <ignored path="rapnd.iws" />
     <ignored path=".idea/workspace.xml" />
     <file path="/Dummy.txt" changelist="f6afd36d-d859-490b-9e0a-84364c409f1d" time="1386274474869" ignored="false" />
-    <file path="/daemon.rb" changelist="f6afd36d-d859-490b-9e0a-84364c409f1d" time="1386277018004" ignored="false" />
+    <file path="/daemon.rb" changelist="f6afd36d-d859-490b-9e0a-84364c409f1d" time="1386277190654" ignored="false" />
     <file path="$PROJECT_DIR$/../liquidtalent/Gemfile" changelist="f6afd36d-d859-490b-9e0a-84364c409f1d" time="1386179168843" ignored="false" />
     <file path="/Gemfile" changelist="f6afd36d-d859-490b-9e0a-84364c409f1d" time="1386179167075" ignored="false" />
     <file path="$PROJECT_DIR$/../liquidtalent/app/models/notification.rb" changelist="f6afd36d-d859-490b-9e0a-84364c409f1d" time="1386198859034" ignored="false" />
@@ -90,7 +90,7 @@
       <file leaf-file-name="daemon.rb" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/lib/rapnd/daemon.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="2" column="56" selection-start="83" selection-end="83" vertical-scroll-proportion="0.045045044">
+            <state line="5" column="15" selection-start="135" selection-end="135" vertical-scroll-proportion="0.11261261">
               <folding />
             </state>
           </provider>
@@ -589,7 +589,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/lib/rapnd/daemon.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="2" column="56" selection-start="83" selection-end="83" vertical-scroll-proportion="0.045045044">
+        <state line="5" column="15" selection-start="135" selection-end="135" vertical-scroll-proportion="0.11261261">
           <folding />
         </state>
       </provider>

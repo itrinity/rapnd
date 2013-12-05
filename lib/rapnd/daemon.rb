@@ -3,7 +3,7 @@ require 'active_support/ordered_hash'
 require 'active_support/json'
 require 'base64'
 require 'airbrake'
-require 'client'
+require 'rapnd/client'
 
 module Rapnd
   class Daemon

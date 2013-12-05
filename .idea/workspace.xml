@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f6afd36d-d859-490b-9e0a-84364c409f1d" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/rapnd/daemon.rb" afterPath="$PROJECT_DIR$/lib/rapnd/daemon.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/rapnd/client.rb" afterPath="$PROJECT_DIR$/lib/rapnd/client.rb" />
     </list>
     <ignored path="rapnd.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -66,7 +66,7 @@
     <file path="$PROJECT_DIR$/../liquidtalent/app/controllers/users_controller.rb" changelist="f6afd36d-d859-490b-9e0a-84364c409f1d" time="1386256531534" ignored="false" />
     <file path="/schema.rb" changelist="f6afd36d-d859-490b-9e0a-84364c409f1d" time="1386245574406" ignored="false" />
     <file path="/feedback.rb" changelist="f6afd36d-d859-490b-9e0a-84364c409f1d" time="1386283435492" ignored="false" />
-    <file path="/client.rb" changelist="f6afd36d-d859-490b-9e0a-84364c409f1d" time="1386283472830" ignored="false" />
+    <file path="/client.rb" changelist="f6afd36d-d859-490b-9e0a-84364c409f1d" time="1386286082433" ignored="false" />
     <file path="/rapnd.rb" changelist="f6afd36d-d859-490b-9e0a-84364c409f1d" time="1386281352067" ignored="false" />
     <file path="/config.rb" changelist="f6afd36d-d859-490b-9e0a-84364c409f1d" time="1386282302498" ignored="false" />
     <file path="/logger.rb" changelist="f6afd36d-d859-490b-9e0a-84364c409f1d" time="1386285838208" ignored="false" />
@@ -89,10 +89,10 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="daemon.rb" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="daemon.rb" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/lib/rapnd/daemon.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="39" column="38" selection-start="1367" selection-end="1367" vertical-scroll-proportion="0.8783784">
+            <state line="40" column="16" selection-start="1384" selection-end="1404" vertical-scroll-proportion="-24.0">
               <folding />
             </state>
           </provider>
@@ -116,10 +116,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="client.rb" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="client.rb" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/lib/rapnd/client.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="13" column="12" selection-start="259" selection-end="259" vertical-scroll-proportion="0.0">
+            <state line="11" column="36" selection-start="258" selection-end="258" vertical-scroll-proportion="0.23878437">
               <folding />
             </state>
           </provider>
@@ -181,12 +181,12 @@
       <list>
         <option value="$PROJECT_DIR$/lib/rapnd/config.rb" />
         <option value="$PROJECT_DIR$/lib/rapnd/feedback.rb" />
-        <option value="$PROJECT_DIR$/lib/rapnd/client.rb" />
         <option value="$PROJECT_DIR$/lib/rapnd/logger.rb" />
         <option value="$PROJECT_DIR$/bin/rapnd" />
         <option value="$PROJECT_DIR$/lib/rapnd.rb" />
         <option value="$PROJECT_DIR$/lib/rapnd/log.rb" />
         <option value="$PROJECT_DIR$/lib/rapnd/daemon.rb" />
+        <option value="$PROJECT_DIR$/lib/rapnd/client.rb" />
       </list>
     </option>
   </component>
@@ -581,13 +581,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/lib/rapnd/client.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="13" column="12" selection-start="259" selection-end="259" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/lib/rapnd/config.rb">
       <provider selected="true" editor-type-id="text-editor">
         <state line="33" column="19" selection-start="632" selection-end="639" vertical-scroll-proportion="0.0">
@@ -618,7 +611,14 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/lib/rapnd/daemon.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="39" column="38" selection-start="1367" selection-end="1367" vertical-scroll-proportion="0.8783784">
+        <state line="40" column="16" selection-start="1384" selection-end="1404" vertical-scroll-proportion="-24.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/rapnd/client.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="11" column="36" selection-start="258" selection-end="258" vertical-scroll-proportion="0.23878437">
           <folding />
         </state>
       </provider>

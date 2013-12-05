@@ -8,6 +8,8 @@ module Rapnd
       @password = options[:password]
       @host = options[:host]
       @port = options[:port]
+
+      @logger = Rapnd::Log.new.write
     end
 
     def connect!

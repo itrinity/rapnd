@@ -2,6 +2,7 @@ require 'rapnd/daemon'
 require 'rapnd/notification'
 require 'rapnd/config'
 require 'redis'
+require 'logger'
 
 module Rapnd
   extend self
@@ -12,6 +13,10 @@ module Rapnd
   
   def redis
     @redis ||= Redis.new(:host => Rapnd.config.redis_host, :port => Rapnd.config.redis_port, :password => Rapnd.config.redis_password)
+  end
+
+  def logger
+    @logger ||= Logger.new("#{options[:dir]}/log/#{options[:queue]}.log")
   end
   
   def configure

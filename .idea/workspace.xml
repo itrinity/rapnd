@@ -2,12 +2,15 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f6afd36d-d859-490b-9e0a-84364c409f1d" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/rapnd/client.rb" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/rapnd/daemon.rb" afterPath="$PROJECT_DIR$/lib/rapnd/daemon.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/rapnd.rb" afterPath="$PROJECT_DIR$/lib/rapnd.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="rapnd.iws" />
     <ignored path=".idea/workspace.xml" />
-    <file path="/Dummy.txt" changelist="f6afd36d-d859-490b-9e0a-84364c409f1d" time="1386201255583" ignored="false" />
-    <file path="/daemon.rb" changelist="f6afd36d-d859-490b-9e0a-84364c409f1d" time="1386261172084" ignored="false" />
+    <file path="/Dummy.txt" changelist="f6afd36d-d859-490b-9e0a-84364c409f1d" time="1386274474869" ignored="false" />
+    <file path="/daemon.rb" changelist="f6afd36d-d859-490b-9e0a-84364c409f1d" time="1386275286414" ignored="false" />
     <file path="$PROJECT_DIR$/../liquidtalent/Gemfile" changelist="f6afd36d-d859-490b-9e0a-84364c409f1d" time="1386179168843" ignored="false" />
     <file path="/Gemfile" changelist="f6afd36d-d859-490b-9e0a-84364c409f1d" time="1386179167075" ignored="false" />
     <file path="$PROJECT_DIR$/../liquidtalent/app/models/notification.rb" changelist="f6afd36d-d859-490b-9e0a-84364c409f1d" time="1386198859034" ignored="false" />
@@ -65,6 +68,9 @@
     <file path="/users_controller.rb" changelist="f6afd36d-d859-490b-9e0a-84364c409f1d" time="1386256523803" ignored="false" />
     <file path="$PROJECT_DIR$/../liquidtalent/app/controllers/users_controller.rb" changelist="f6afd36d-d859-490b-9e0a-84364c409f1d" time="1386256531534" ignored="false" />
     <file path="/schema.rb" changelist="f6afd36d-d859-490b-9e0a-84364c409f1d" time="1386245574406" ignored="false" />
+    <file path="/feedback.rb" changelist="f6afd36d-d859-490b-9e0a-84364c409f1d" time="1386274012466" ignored="false" />
+    <file path="/client.rb" changelist="f6afd36d-d859-490b-9e0a-84364c409f1d" time="1386274437647" ignored="false" />
+    <file path="/rapnd.rb" changelist="f6afd36d-d859-490b-9e0a-84364c409f1d" time="1386274898753" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -84,28 +90,10 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="rapnd.rb" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/lib/rapnd.rb">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="9" column="44" selection-start="196" selection-end="199" vertical-scroll-proportion="-5.4">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="daemon.rb" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/lib/rapnd/daemon.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="107" column="49" selection-start="3150" selection-end="3150" vertical-scroll-proportion="2.2542136">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="rapnd" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/bin/rapnd">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="82" column="44" selection-start="2076" selection-end="2079" vertical-scroll-proportion="-23.28">
+            <state line="61" column="43" selection-start="1919" selection-end="1919" vertical-scroll-proportion="1.2851124">
               <folding />
             </state>
           </provider>
@@ -114,16 +102,34 @@
       <file leaf-file-name="notification.rb" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/lib/rapnd/notification.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="6" column="46" selection-start="301" selection-end="304" vertical-scroll-proportion="-3.6">
+            <state line="6" column="46" selection-start="301" selection-end="304" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="config.rb" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/lib/rapnd/config.rb">
+      <file leaf-file-name="client.rb" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/lib/rapnd/client.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="23" column="14" selection-start="428" selection-end="429" vertical-scroll-proportion="-13.8">
+            <state line="59" column="47" selection-start="1372" selection-end="1372" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="rapnd.rb" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/lib/rapnd.rb">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="14" column="47" selection-start="290" selection-end="290" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="feedback.rb" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/lib/rapnd/feedback.rb">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="7" column="46" selection-start="156" selection-end="156" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -149,6 +155,9 @@
       <list>
         <option value="$PROJECT_DIR$/lib/rapnd/config.rb" />
         <option value="$PROJECT_DIR$/bin/rapnd" />
+        <option value="$PROJECT_DIR$/lib/rapnd/feedback.rb" />
+        <option value="$PROJECT_DIR$/lib/rapnd.rb" />
+        <option value="$PROJECT_DIR$/lib/rapnd/client.rb" />
         <option value="$PROJECT_DIR$/lib/rapnd/daemon.rb" />
       </list>
     </option>
@@ -156,7 +165,7 @@
   <component name="ProjectFrameBounds">
     <option name="x" value="26" />
     <option name="y" value="24" />
-    <option name="width" value="935" />
+    <option name="width" value="852" />
     <option name="height" value="876" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="false">
@@ -311,6 +320,36 @@
     </servers>
   </component>
   <component name="RunManager">
+    <configuration default="true" type="RSpecRunConfigurationType" factoryName="RSpec">
+      <predefined_log_file id="RUBY_RSPEC" enabled="true" />
+      <module name="" />
+      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="RUBY_ARGS" VALUE="-e $stdout.sync=true;$stderr.sync=true;load($0=ARGV.shift)" />
+      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="WORK DIR" VALUE="" />
+      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="SHOULD_USE_SDK" VALUE="false" />
+      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="ALTERN_SDK_NAME" VALUE="" />
+      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="myPassParentEnvs" VALUE="true" />
+      <envs />
+      <EXTENSION ID="BundlerRunConfigurationExtension" bundleExecEnabled="false" />
+      <EXTENSION ID="JRubyRunConfigurationExtension" />
+      <EXTENSION ID="RubyCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" track_test_folders="true" runner="rcov">
+        <COVERAGE_PATTERN ENABLED="true">
+          <PATTERN REGEXPS="/.rvm/" INCLUDED="false" />
+        </COVERAGE_PATTERN>
+      </EXTENSION>
+      <EXTENSION ID="org.jetbrains.plugins.ruby.motion.run.MotionSimulatorRunExtension" />
+      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="TESTS_FOLDER_PATH" VALUE="" />
+      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="TEST_SCRIPT_PATH" VALUE="" />
+      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="SPEC_RUNNER_PATH" VALUE="" />
+      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="TEST_FILE_MASK" VALUE="**/*_spec.rb" />
+      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="SPEC_EXAMPLE_NAME" VALUE="" />
+      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="TEST_TEST_TYPE" VALUE="TEST_SCRIPT" />
+      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="SPEC_ARGS" VALUE="" />
+      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="RUNNER_VERSION" VALUE="" />
+      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="USE_CUSTOM_SPEC_RUNNER" VALUE="false" />
+      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="DRB" VALUE="false" />
+      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="FULL_BACKTRACE" VALUE="false" />
+      <method />
+    </configuration>
     <configuration default="true" type="RubyRunConfigurationType" factoryName="Ruby">
       <module name="" />
       <RUBY_RUN_CONFIG NAME="RUBY_ARGS" VALUE="-e $stdout.sync=true;$stderr.sync=true;load($0=ARGV.shift)" />
@@ -329,6 +368,32 @@
       <EXTENSION ID="org.jetbrains.plugins.ruby.motion.run.MotionSimulatorRunExtension" />
       <RUBY_RUN_CONFIG NAME="SCRIPT_PATH" VALUE="" />
       <RUBY_RUN_CONFIG NAME="SCRIPT_ARGS" VALUE="" />
+      <method />
+    </configuration>
+    <configuration default="true" type="TestUnitRunConfigurationType" factoryName="Test::Unit/Shoulda/Minitest">
+      <predefined_log_file id="RUBY_TESTUNIT" enabled="true" />
+      <module name="" />
+      <RTEST_RUN_CONFIG_SETTINGS_ID NAME="RUBY_ARGS" VALUE="-e $stdout.sync=true;$stderr.sync=true;load($0=ARGV.shift)" />
+      <RTEST_RUN_CONFIG_SETTINGS_ID NAME="WORK DIR" VALUE="" />
+      <RTEST_RUN_CONFIG_SETTINGS_ID NAME="SHOULD_USE_SDK" VALUE="false" />
+      <RTEST_RUN_CONFIG_SETTINGS_ID NAME="ALTERN_SDK_NAME" VALUE="" />
+      <RTEST_RUN_CONFIG_SETTINGS_ID NAME="myPassParentEnvs" VALUE="true" />
+      <envs />
+      <EXTENSION ID="BundlerRunConfigurationExtension" bundleExecEnabled="false" />
+      <EXTENSION ID="JRubyRunConfigurationExtension" />
+      <EXTENSION ID="RubyCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" track_test_folders="true" runner="rcov">
+        <COVERAGE_PATTERN ENABLED="true">
+          <PATTERN REGEXPS="/.rvm/" INCLUDED="false" />
+        </COVERAGE_PATTERN>
+      </EXTENSION>
+      <EXTENSION ID="org.jetbrains.plugins.ruby.motion.run.MotionSimulatorRunExtension" />
+      <RTEST_RUN_CONFIG_SETTINGS_ID NAME="TESTS_FOLDER_PATH" VALUE="" />
+      <RTEST_RUN_CONFIG_SETTINGS_ID NAME="TEST_SCRIPT_PATH" VALUE="" />
+      <RTEST_RUN_CONFIG_SETTINGS_ID NAME="TEST_FILE_MASK" VALUE="" />
+      <RTEST_RUN_CONFIG_SETTINGS_ID NAME="TEST_METHOD_NAME" VALUE="" />
+      <RTEST_RUN_CONFIG_SETTINGS_ID NAME="TEST_TEST_TYPE" VALUE="TEST_SCRIPT" />
+      <RTEST_RUN_CONFIG_SETTINGS_ID NAME="DRB" VALUE="false" />
+      <RTEST_RUN_CONFIG_SETTINGS_ID NAME="RUNNER_OPTIONS" VALUE="" />
       <method />
     </configuration>
     <list size="0" />
@@ -356,11 +421,31 @@
       <created>1386187871814</created>
       <updated>1386187871814</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Fixed push method.">
+      <created>1386261931457</created>
+      <updated>1386261931457</updated>
+    </task>
+    <task id="LOCAL-00006" summary="Added socket flush and refactoring">
+      <created>1386262182096</created>
+      <updated>1386262182096</updated>
+    </task>
+    <task id="LOCAL-00007" summary="Refactoring">
+      <created>1386262255255</created>
+      <updated>1386262255255</updated>
+    </task>
+    <task id="LOCAL-00008" summary="Enhanced connection checking.">
+      <created>1386272967405</created>
+      <updated>1386272967405</updated>
+    </task>
+    <task id="LOCAL-00009" summary="Implemented feedback checking.">
+      <created>1386274477281</created>
+      <updated>1386274477281</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="26" y="24" width="935" height="876" extended-state="0" />
+    <frame x="26" y="24" width="852" height="876" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
@@ -374,7 +459,7 @@
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3288948" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24915445" sideWeight="0.6711052" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2748756" sideWeight="0.6711052" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -426,7 +511,7 @@
     <option name="WRAP_WHEN_TYPING_REACHES_RIGHT_MARGIN" value="false" />
     <option name="FORCE_NON_EMPTY_COMMENT" value="false" />
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="false" />
-    <option name="LAST_COMMIT_MESSAGE" value="Changed directories to the standard RoR 4 paths." />
+    <option name="LAST_COMMIT_MESSAGE" value="Implemented feedback checking." />
     <option name="MAKE_NEW_CHANGELIST_ACTIVE" value="false" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_FILES_UP_TO_DATE_BEFORE_COMMIT" value="false" />
@@ -444,42 +529,61 @@
     <MESSAGE value="Removed symbolize_keys method" />
     <MESSAGE value="Adjusted symbolize_keys method" />
     <MESSAGE value="Changed directories to the standard RoR 4 paths." />
+    <MESSAGE value="Fixed push method." />
+    <MESSAGE value="Added socket flush and refactoring" />
+    <MESSAGE value="Refactoring" />
+    <MESSAGE value="Enhanced connection checking." />
+    <MESSAGE value="Implemented feedback checking." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/lib/rapnd.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="9" column="44" selection-start="196" selection-end="199" vertical-scroll-proportion="-5.4">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/bin/rapnd">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="82" column="44" selection-start="2076" selection-end="2079" vertical-scroll-proportion="-23.28">
+        <state line="82" column="44" selection-start="2076" selection-end="2079" vertical-scroll-proportion="0.8738739">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/lib/rapnd/config.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="23" column="14" selection-start="428" selection-end="429" vertical-scroll-proportion="-13.8">
+        <state line="23" column="14" selection-start="428" selection-end="429" vertical-scroll-proportion="0.49285713">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/rapnd/feedback.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="7" column="46" selection-start="156" selection-end="156" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/rapnd.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="14" column="47" selection-start="290" selection-end="290" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/lib/rapnd/notification.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="6" column="46" selection-start="301" selection-end="304" vertical-scroll-proportion="-3.6">
+        <state line="6" column="46" selection-start="301" selection-end="304" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/rapnd/client.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="59" column="47" selection-start="1372" selection-end="1372" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/lib/rapnd/daemon.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="107" column="49" selection-start="3150" selection-end="3150" vertical-scroll-proportion="2.2542136">
+        <state line="61" column="43" selection-start="1919" selection-end="1919" vertical-scroll-proportion="1.2851124">
           <folding />
         </state>
       </provider>

@@ -37,11 +37,11 @@ module Rapnd
       @logger.info 'Connecting...'
 
       cert = self.setup_certificate
-      @sock = self.setup_socket(cert)
+      @socket = self.setup_socket(cert)
 
       @logger.info 'Connected!'
 
-      @sock
+      @socket
     end
 
     def setup_certificate
@@ -65,14 +65,14 @@ module Rapnd
     end
 
     def reset_socket
-      @sock.close if @sock
-      @sock = nil
+      @socket.close if @socket
+      @socket = nil
 
       connect!
     end
 
     def socket
-      @sock ||= connect!
+      @socket ||= connect!
     end
 
     def push(notification)

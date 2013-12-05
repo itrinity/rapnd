@@ -38,7 +38,7 @@ module Rapnd
         config.logfile = options[:logfile]
       end
 
-      @logger = Rapnd::Log.write
+      @logger = Rapnd::Log.new.write
       @logger.info "Listening on queue: #{self.queue}"
     end
     

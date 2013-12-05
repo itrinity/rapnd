@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f6afd36d-d859-490b-9e0a-84364c409f1d" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/rapnd/client.rb" afterPath="$PROJECT_DIR$/lib/rapnd/client.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/rapnd/config.rb" afterPath="$PROJECT_DIR$/lib/rapnd/config.rb" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/rapnd/feedback.rb" afterPath="$PROJECT_DIR$/lib/rapnd/feedback.rb" />
     </list>
     <ignored path="rapnd.iws" />
@@ -63,13 +63,13 @@
     <file path="/attribute.rb" changelist="f6afd36d-d859-490b-9e0a-84364c409f1d" time="1386203010845" ignored="false" />
     <file path="$PROJECT_DIR$/../liquidtalent/app/models/user.rb" changelist="f6afd36d-d859-490b-9e0a-84364c409f1d" time="1386256814817" ignored="false" />
     <file path="/user.rb" changelist="f6afd36d-d859-490b-9e0a-84364c409f1d" time="1386256758052" ignored="false" />
-    <file path="/users_controller.rb" changelist="f6afd36d-d859-490b-9e0a-84364c409f1d" time="1386256523803" ignored="false" />
-    <file path="$PROJECT_DIR$/../liquidtalent/app/controllers/users_controller.rb" changelist="f6afd36d-d859-490b-9e0a-84364c409f1d" time="1386256531534" ignored="false" />
+    <file path="/users_controller.rb" changelist="f6afd36d-d859-490b-9e0a-84364c409f1d" time="1386286832492" ignored="false" />
+    <file path="$PROJECT_DIR$/../liquidtalent/app/controllers/users_controller.rb" changelist="f6afd36d-d859-490b-9e0a-84364c409f1d" time="1386286833557" ignored="false" />
     <file path="/schema.rb" changelist="f6afd36d-d859-490b-9e0a-84364c409f1d" time="1386245574406" ignored="false" />
-    <file path="/feedback.rb" changelist="f6afd36d-d859-490b-9e0a-84364c409f1d" time="1386286464981" ignored="false" />
+    <file path="/feedback.rb" changelist="f6afd36d-d859-490b-9e0a-84364c409f1d" time="1386287055857" ignored="false" />
     <file path="/client.rb" changelist="f6afd36d-d859-490b-9e0a-84364c409f1d" time="1386286598904" ignored="false" />
     <file path="/rapnd.rb" changelist="f6afd36d-d859-490b-9e0a-84364c409f1d" time="1386281352067" ignored="false" />
-    <file path="/config.rb" changelist="f6afd36d-d859-490b-9e0a-84364c409f1d" time="1386282302498" ignored="false" />
+    <file path="/config.rb" changelist="f6afd36d-d859-490b-9e0a-84364c409f1d" time="1386287044234" ignored="false" />
     <file path="/logger.rb" changelist="f6afd36d-d859-490b-9e0a-84364c409f1d" time="1386285838208" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -135,19 +135,19 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="rapnd.rb" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="rapnd.rb" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/lib/rapnd.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="13" column="36" selection-start="292" selection-end="305" vertical-scroll-proportion="0.2927928">
+            <state line="13" column="36" selection-start="292" selection-end="305" vertical-scroll-proportion="-7.8">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="config.rb" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="config.rb" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/lib/rapnd/config.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="33" column="19" selection-start="632" selection-end="639" vertical-scroll-proportion="0.0">
+            <state line="31" column="52" selection-start="592" selection-end="592" vertical-scroll-proportion="0.6605114">
               <folding />
             </state>
           </provider>
@@ -156,7 +156,7 @@
       <file leaf-file-name="feedback.rb" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/lib/rapnd/feedback.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="28" column="9" selection-start="654" selection-end="654" vertical-scroll-proportion="0.0">
+            <state line="38" column="90" selection-start="824" selection-end="824" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -180,19 +180,19 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/lib/rapnd/config.rb" />
         <option value="$PROJECT_DIR$/lib/rapnd/logger.rb" />
         <option value="$PROJECT_DIR$/bin/rapnd" />
         <option value="$PROJECT_DIR$/lib/rapnd.rb" />
         <option value="$PROJECT_DIR$/lib/rapnd/log.rb" />
         <option value="$PROJECT_DIR$/lib/rapnd/daemon.rb" />
-        <option value="$PROJECT_DIR$/lib/rapnd/feedback.rb" />
         <option value="$PROJECT_DIR$/lib/rapnd/client.rb" />
+        <option value="$PROJECT_DIR$/lib/rapnd/config.rb" />
+        <option value="$PROJECT_DIR$/lib/rapnd/feedback.rb" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="26" />
+    <option name="x" value="720" />
     <option name="y" value="24" />
     <option name="width" value="852" />
     <option name="height" value="876" />
@@ -474,7 +474,7 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="26" y="24" width="852" height="876" extended-state="0" />
+    <frame x="720" y="24" width="852" height="876" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
@@ -575,13 +575,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/lib/rapnd/config.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="33" column="19" selection-start="632" selection-end="639" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/lib/rapnd/log.rb">
       <provider selected="true" editor-type-id="text-editor">
         <state line="14" column="0" selection-start="212" selection-end="212" vertical-scroll-proportion="0.0">
@@ -603,6 +596,13 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/lib/rapnd.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="13" column="36" selection-start="292" selection-end="305" vertical-scroll-proportion="-7.8">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/lib/rapnd/client.rb">
       <provider selected="true" editor-type-id="text-editor">
         <state line="75" column="42" selection-start="1886" selection-end="1886" vertical-scroll-proportion="0.0">
@@ -612,14 +612,14 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/lib/rapnd/feedback.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="28" column="9" selection-start="654" selection-end="654" vertical-scroll-proportion="0.0">
+        <state line="38" column="90" selection-start="824" selection-end="824" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/lib/rapnd.rb">
+    <entry file="file://$PROJECT_DIR$/lib/rapnd/config.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="13" column="36" selection-start="292" selection-end="305" vertical-scroll-proportion="0.2927928">
+        <state line="31" column="52" selection-start="592" selection-end="592" vertical-scroll-proportion="0.6605114">
           <folding />
         </state>
       </provider>

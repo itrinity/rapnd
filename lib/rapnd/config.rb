@@ -32,5 +32,7 @@ module Rapnd
     option :redis_port, :default => 6379
     option :redis_password
     option :logfile
+    option :cert_file
+    option :cert_password
   end
 end

@@ -74,7 +74,7 @@ module Rapnd
     def push(notification)
       begin
         @logger.info "Sending #{notification.device_token}: #{notification.json_payload}"
-        self.apple.write(notification.to_bytes)
+        @sock.write(notification.to_bytes)
         @logger.info 'Message sent'
 
         true

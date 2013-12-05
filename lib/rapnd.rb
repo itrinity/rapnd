@@ -5,23 +5,18 @@ require 'redis'
 require 'logger'
 
 module Rapnd
-  extend self
-  
-  def queue(queue_name, message)
-    self.redis.lpush(queue_name, message.to_json)
-  end
-  
-  def redis
-    @redis ||= Redis.new(:host => Rapnd.config.redis_host, :port => Rapnd.config.redis_port, :password => Rapnd.config.redis_password)
-  end
+  class << self
+    def queue(queue_name, message)
+      self.redis.lpush(queue_name, message.to_json)
+    end
 
-  def logger
-    @logger ||= Logger.new("#{options[:dir]}/log/#{options[:queue]}.log")
-  end
-  
-  def configure
-    block_given? ? yield(Config) : Config
-  end
-  alias :config :configure
+    def redis
+      @redis ||= Redis.new(:host => Rapnd.config.redis_host, :port => Rapnd.config.redis_port, :password => Rapnd.config.redis_password)
+    end
 
+    def configure
+      block_given? ? yield(Config) : Config
+    end
+    alias :config :configure
+  end
 end

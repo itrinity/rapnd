@@ -26,7 +26,9 @@ module Rapnd
       @cert = options[:cert]
       @password = options[:password]
       @host = options[:host]
-      Rapnd.logger.info "Listening on queue: #{self.queue}"
+      @dir = options[:dir]
+      @logger ||= Logger.new("#{options[:dir]}/log/#{options[:queue]}.log")
+      @logger.info "Listening on queue: #{self.queue}"
     end
     
     def run!
@@ -40,15 +42,15 @@ module Rapnd
           end
         rescue Exception => e
           if e.class == Interrupt || e.class == SystemExit
-            Rapnd.logger.info 'Shutting down...'
+            @logger.info 'Shutting down...'
             exit(0)
           end
 
-          Rapnd.logger.error "Encountered error: #{e}, backtrace #{e.backtrace}"
+          @logger.error "Encountered error: #{e}, backtrace #{e.backtrace}"
 
-          Rapnd.logger.info 'Trying to reconnect...'
+          @logger.info 'Trying to reconnect...'
           client.connect!
-          Rapnd.logger.info 'Reconnected'
+          @logger.info 'Reconnected'
 
           retry
         end
@@ -56,7 +58,7 @@ module Rapnd
     end
 
     def client
-      @client ||= Rapnd::Client.new(host: @host, cert: @cert, password: @password)
+      @client ||= Rapnd::Client.new(host: @host, cert: @cert, password: @password, dir: @dir, queue: @queue)
     end
   end
 end

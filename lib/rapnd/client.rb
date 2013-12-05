@@ -7,6 +7,8 @@ module Rapnd
       @cert = options[:cert]
       @password = options[:password]
       @host = options[:host]
+
+      @logger ||= Logger.new("#{options[:dir]}/log/#{options[:queue]}.log")
     end
 
     def connect!

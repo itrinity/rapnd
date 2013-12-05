@@ -13,7 +13,7 @@ module Rapnd
     end
 
     def set_logger
-      @logger = Logger.new(@logfile) unless @logfile
+      @logger = Logger.new(@logfile) if @logfile
     end
   end
 end

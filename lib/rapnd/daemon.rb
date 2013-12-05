@@ -4,6 +4,7 @@ require 'active_support/json'
 require 'base64'
 require 'airbrake'
 require 'rapnd/client'
+require 'rapnd/config'
 require 'rapnd/log'
 
 module Rapnd
@@ -33,7 +34,11 @@ module Rapnd
       @dir = options[:dir]
       #@logger ||= Logger.new("#{options[:dir]}/log/#{options[:queue]}.log")
 
-      @logger = Log.new(logfile: options[:logfile]).write
+      Rapnd.configure do |config|
+        config.logfile = options[:logfile]
+      end
+
+      @logger = Rapnd::Log.write
       @logger.info "Listening on queue: #{self.queue}"
     end
     

@@ -63,7 +63,7 @@ module Rapnd
           client.connect!
           @logger.info 'Reconnected'
 
-          retry
+          client.push(notification)
         end
       end
     end

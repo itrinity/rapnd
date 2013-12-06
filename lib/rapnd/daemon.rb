@@ -2,7 +2,6 @@ require 'redis'
 require 'active_support/ordered_hash'
 require 'active_support/json'
 require 'base64'
-require 'airbrake'
 require 'rapnd/client'
 require 'rapnd/config'
 require 'rapnd/log'
@@ -19,9 +18,7 @@ module Rapnd
       options[:queue]       ||= 'rapnd_queue'
       options[:password]    ||= ''
       raise 'No cert provided!' unless options[:cert]
-      
-      #Airbrake.configure { |config| config.api_key = options[:airbrake]; @airbrake = true; } if options[:airbrake]
-      
+
       redis_options = { :host => options[:redis_host], :port => options[:redis_port] }
       redis_options[:password] = options[:redis_password] if options.has_key?(:redis_password)
       
@@ -32,7 +29,6 @@ module Rapnd
       @host = options[:host]
       @port = options[:port]
       @dir = options[:dir]
-      #@logger ||= Logger.new("#{options[:dir]}/log/#{options[:queue]}.log")
 
       Rapnd.configure do |config|
         config.logfile = options[:logfile]
@@ -47,9 +43,9 @@ module Rapnd
         begin
           message = @redis.blpop(self.queue, 1)
           if message
-            notification = Rapnd::Notification.new(JSON.parse(message.last,:symbolize_names => true))
+            @notification = Rapnd::Notification.new(JSON.parse(message.last,:symbolize_names => true))
 
-            client.push(notification)
+            client.push(@notification)
           end
         rescue Exception => e
           if e.class == Interrupt || e.class == SystemExit
@@ -63,7 +59,7 @@ module Rapnd
           client.connect!
           @logger.info 'Reconnected'
 
-          client.push(notification)
+          client.push(@notification)
         end
       end
     end

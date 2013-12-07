@@ -67,7 +67,7 @@ module Rapnd
     end
 
     def send_notification
-      if @last_notification.nil? || @last_notification < 1.hour.ago
+      if @last_notification.nil? || @last_notification < Time.now - 60
         @logger.info 'Forced reconnection...'
         client.connect!
       end

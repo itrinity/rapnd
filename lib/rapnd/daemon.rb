@@ -39,13 +39,15 @@ module Rapnd
     end
     
     def run!
+      @last_notification = nil
+
       loop do
         begin
           message = @redis.blpop(self.queue, 1)
           if message
             @notification = Rapnd::Notification.new(JSON.parse(message.last,:symbolize_names => true))
 
-            client.push(@notification)
+            send_notification
           end
         rescue Exception => e
           if e.class == Interrupt || e.class == SystemExit
@@ -61,6 +63,16 @@ module Rapnd
 
           client.push(@notification)
         end
+      end
+    end
+
+    def send_notification
+      if @last_notification.nil? || @last_notification < 1.hour.ago
+        @logger.info 'Forced reconnection...'
+        client.connect!
+        client.push(@notification)
+
+        @last_notification = Time.now
       end
     end
 
